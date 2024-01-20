@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
 li {
   list-style: none;
 }
- 
+
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -40,7 +41,6 @@ body {
   font-weight: normal;
   font-style: normal;
   text-transform: none;
-  letter-spacing: 0.125rem;
 }
 
 svg,
@@ -52,7 +52,7 @@ picture {
   max-width: 100%;
 }
 
-
+/* HEADER */
 .header {
   width: 100%; 
   max-height: 8rem;
@@ -66,11 +66,13 @@ picture {
   box-shadow: 0 1.5625rem 2.8125rem rgba(0, 0, 0, .2);
   border: .125rem solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(.125rem);
+  /* ANIMACION PARA QUE EL HEADER BAJE CUANDO ABRO LA PAGINA */
   opacity: 0;
   animation: bajar 1s forwards;
   position: relative;
   z-index: 2;
 }
+  /* ANIMACION PARA QUE EL HEADER BAJE CUANDO ABRO LA PAGINA */
 
 @keyframes bajar {
   from {
@@ -114,6 +116,8 @@ picture {
   width: 100%;
 }
 
+/* BUTTON DE MENU HAMBURGUESA CUANDO TENGO RESPONSIVE */
+
 .header__button {
   background: none;
   border: none;
@@ -123,6 +127,8 @@ picture {
   display: none;
   transition: transform 1s ease;
 }
+
+/* CUANDO HAGO CLICK UN BUTTON DE MENU HAMBURGUESA CAMBIA SU POSICION 90 GRADOS */
 
 .header__button:hover {
   transform: rotate(90deg);
@@ -152,6 +158,8 @@ picture {
   font-size: 1rem;
 }
 
+/* CUANDO TENGO LA PAGINA VERSION RESPONSIVE, NO SE VE EL MENU, HAY QUE HACER CLICK EN EL BUTTON Y SE .AÑADE ACTIVO AL HEADER__UL PARA QUE SE ABRE MENU */
+
 @media (max-width: 1039px) {
   .header__ul {
   width: 100%;
@@ -175,6 +183,7 @@ picture {
   }
 }
 
+/* ANIMACION PARA QUE MENU SE ABRE DE FORMA MÁS FLUIDA */
 @keyframes luz {
   from {
       opacity: 0;
@@ -191,11 +200,13 @@ picture {
   transition: color 0.3s ease;
 }
 
+/* CUANDO HACEMOS MOUSEOVER EN EL MENU, SE HACE HOVER CON EL CAMBIO DE COLOR Y CURSOR */
 .header__shu:hover{
   cursor: pointer;
   color: #FBE4D8;
 }
 
+/* MAIN */
 .main{
   width: 80%;
   display: flex;
@@ -208,6 +219,7 @@ picture {
   animation: aparecer 2s forwards;
 }
 
+/* ANIMATION CUANDO SE ABRE LA PAGINA, LA CAJA CON FORMULARIO SE MUEVE Y CAMBIA DE OPACIDAD */
 @keyframes aparecer {
   from {
       opacity: 0;
@@ -220,6 +232,7 @@ picture {
   }
 }
 
+/* CUANDO SE HACE REPONSIVE, CAMBIAMOS DE ANCHO Y MARGIN */
 @media (max-width: 1100px) {
   .main {
     width: 100%;
@@ -227,6 +240,7 @@ picture {
   }
 }
 
+/* FORMULARIO DE CONTACTO, CAJA GRANDE */
 .main__forms{
   width: 60%;
   min-height: 7.5rem;
@@ -243,7 +257,8 @@ picture {
   backdrop-filter: blur(.125rem);
   text-align: center;
 }
-
+ 
+/* CUANDO SE HACE RESPONSIVE, LA CAJA GRANDE DE FORMULARIO SE AJUSTA, CAMBIA SU ANCHO Y PADDING */
 @media (max-width: 1110px) {
   .main__forms {
     width: 90%;
@@ -251,6 +266,7 @@ picture {
   }
 }
 
+/* EL TEXTO CONTACTO */
 .main__contacto {
   font-family: 'Rowdies', 'Montserrat', 'Eagle Lake', Helvetica ;
   font-size: 3rem;
@@ -263,6 +279,7 @@ picture {
   text-shadow: 0 .3125rem .3125rem rgba(0, 0, 0, 0.5);
 }
 
+/* CUANDO SE HACE RESPONSIVE, EL TAMAÑO DEL TEXTO CONTACTO SE HACE MÁS PEQUEÑO */
 @media (max-width: 1100px) {
   .main__contacto {
     font-size: 2.5rem;
@@ -298,6 +315,7 @@ input , textarea {
   transition: all 0.5s ease ;
 }
 
+/* CUANDO HACEMOS HOVER EN LA CAJA DE ENVIAR, CAMBIAMOS SU COLOR DE TEXTO, COLOR DE FONDO, TAMAÑO DE FONT SE HACE MÁS GRANDE, SE CAMBIA EL CURSOR AL POINTER */
 .form__enviar:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: rgba(133, 79, 108, 0.7);
@@ -305,6 +323,8 @@ input , textarea {
   cursor: pointer;
 }
 
+
+/* FOOTER, CAJA PRINCIPAL DE FOOTER */
 .footer{
   min-height: 4rem;
   background-color: rgba(133, 79, 108, 0.2);
@@ -326,6 +346,7 @@ input , textarea {
   align-items: center;
 }
 
+/* CONTENIDO DEL AUTOR DE LA PAGINA */
 .footer__author{
   display: flex;
   flex-flow: column nowrap;
@@ -334,6 +355,7 @@ input , textarea {
   padding: 1rem;
 }
 
+/* CONTENIDO DE LOS SOCIAL MEDIA DE AUTOR */
 .footer__social{
   display: flex;
   flex-flow: row nowrap;

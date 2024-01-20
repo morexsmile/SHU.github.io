@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 li {
   list-style: none;
-} 
+}
 
 html {
   scroll-behavior: smooth;
@@ -19,6 +20,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 strong {
   font-weight: inherit;
   font-size: inherit;
@@ -39,7 +41,6 @@ body {
   font-weight: normal;
   font-style: normal;
   text-transform: none;
-  letter-spacing: 0.125rem;
 }
 
 svg,
@@ -51,6 +52,7 @@ picture {
   max-width: 100%;
 }
 
+/* HEADER */
 .header {
   width: 100%; 
   max-height: 8rem;
@@ -64,11 +66,13 @@ picture {
   box-shadow: 0 1.5625rem 2.8125rem rgba(0, 0, 0, .2);
   border: .125rem solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(.125rem);
+  /* ANIMACION PARA QUE EL HEADER BAJE CUANDO ABRO LA PAGINA */
   opacity: 0;
   animation: bajar 1s forwards;
   position: relative;
   z-index: 2;
 }
+  /* ANIMACION PARA QUE EL HEADER BAJE CUANDO ABRO LA PAGINA */
 
 @keyframes bajar {
   from {
@@ -112,6 +116,8 @@ picture {
   width: 100%;
 }
 
+/* BUTTON DE MENU HAMBURGUESA CUANDO TENGO RESPONSIVE */
+
 .header__button {
   background: none;
   border: none;
@@ -121,6 +127,8 @@ picture {
   display: none;
   transition: transform 1s ease;
 }
+
+/* CUANDO HAGO CLICK UN BUTTON DE MENU HAMBURGUESA CAMBIA SU POSICION 90 GRADOS */
 
 .header__button:hover {
   transform: rotate(90deg);
@@ -150,6 +158,8 @@ picture {
   font-size: 1rem;
 }
 
+/* CUANDO TENGO LA PAGINA VERSION RESPONSIVE, NO SE VE EL MENU, HAY QUE HACER CLICK EN EL BUTTON Y SE .AÑADE ACTIVO AL HEADER__UL PARA QUE SE ABRE MENU */
+
 @media (max-width: 1039px) {
   .header__ul {
   width: 100%;
@@ -173,6 +183,8 @@ picture {
   }
 }
 
+/* ANIMACION PARA QUE MENU SE ABRE DE FORMA MÁS FLUIDA */
+
 @keyframes luz {
   from {
       opacity: 0;
@@ -189,11 +201,13 @@ picture {
   transition: color 0.3s ease;
 }
 
+/* CUANDO HACEMOS MOUSEOVER EN EL MENU, SE HACE HOVER CON EL CAMBIO DE COLOR Y CURSOR */
 .header__shu:hover{
   cursor: pointer;
   color: #FBE4D8;
 }
 
+/* MAIN */
 .main{
   width: 70%;
   display: flex;
@@ -204,6 +218,7 @@ picture {
   padding: 3.125rem 0;
 }
 
+/* CUANDO SE HACE RESPONSIVE, CAMBIAMOS DE ANCHO Y MARGIN TOP DE LA CAJA */
 @media (max-width: 1200px) {
   .main {
     width: 95%;
@@ -211,6 +226,7 @@ picture {
   }
 }
 
+/* CAJA PRINCIPAL CON TEXTO */
 .main__texto{
   background-color: rgba(133, 79, 108, 0.7);
   display: flex;
@@ -228,6 +244,7 @@ picture {
   animation: aparecer 2s forwards;
 }
 
+/* ANIMATION CUANDO SE ABRE LA PAGINA, LA CAJA CON TEXTO SE MUEVE Y CAMBIA DE OPACIDAD */
 @keyframes aparecer {
   from {
       opacity: 0;
@@ -240,6 +257,7 @@ picture {
   }
 }
 
+/* FOTOS ESTAN EN DISPLAY GRID */
 .main__animales {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -247,18 +265,21 @@ picture {
   padding: 2rem 0;
 }
 
+/* CUANDO HACEMOS REPONSIVE EL DISPLAY GRID CON LAS FOTOS SE AJUSTA */
 @media (max-width: 1015px) {
   .main__animales {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* CUANDO HACEMOS REPONSIVE EL DISPLAY GRID CON LAS FOTOS SE AJUSTA */
 @media (max-width: 800px) {
   .main__animales {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
+/* ANCHO Y ALTO DE LAS FOTOS */
 .main__photo {
   width: 18.75rem;
   height: 33rem;
@@ -270,11 +291,13 @@ picture {
                -0.4375rem -0.4375rem .875rem #f2f2f2;
 }
 
+  /* CUANDO HACEMOS MOUSE OVER, SE HACE HAVOER, CAMBIANDO EL TAMAÑO DE LA FOTO, SE HACE UN POQUITO MÁS PEQUEÑO, CAMBIA EL CURSOR */
 .main__photo:hover{
   transform: scale(0.9);
   cursor: pointer;
 }
 
+ /* EFECTO LIGHTBOX, Z INDEX USAMOS PARA QUE LA FOTO SE PONE DELANTE DE TODO, COMO LA PRIMERA, MÁS IMPORTANTE */
 .main__lightbox{
   width: 100%;
   height: 100%;
@@ -293,6 +316,7 @@ picture {
   z-index: 1;
 }
 
+/* CUANDO AÑADIMOS CLASE ACTIVO, LA FOTO DE LIGHTBOX CAMBIA SU OPACIDAD DE 0 A 1 */
 .main__lightbox.activo {
   width: 100%;
   opacity: 1;
@@ -301,26 +325,32 @@ picture {
   left: auto;
 }
 
+/* EL ICONO DE CIERRE DE LIGHTBOX */
 .main__close{
   background-color: transparent;
   cursor: pointer;
   transition: transform 0.4s ease;
 }
+
+/* CUANDO QUEREMOS CERRAR EL LIGHTBOX, EL ICONO CAMBIA DE SU POSICION 45 GRADOS */
 .main__close:hover {
   transform: rotate(45deg);
 }
 
+/* ANCHO Y BORDER RADIUS DE FOTO GRANDE DE LIGHTBOX */
 .main__big {
 width: 22rem; 
 border-radius: 1.9375rem;
 }
 
+/* CUANDO SE HACE RESPONSIVE, CAMBIA EL ANCHO */
 @media (max-width: 1039px) {
   .main__big {
    width: 70%;
   }
 }
 
+/* FOOTER, CAJA PRINCIPAL DE FOOTER */
 .footer{
   min-height: 4rem;
   background-color: rgba(133, 79, 108, 0.2);
@@ -342,6 +372,7 @@ border-radius: 1.9375rem;
   align-items: center;
 }
 
+/* CONTENIDO DEL AUTOR DE LA PAGINA */
 .footer__author{
   display: flex;
   flex-flow: column nowrap;
@@ -350,6 +381,7 @@ border-radius: 1.9375rem;
   padding: 1rem;
 }
 
+/* CONTENIDO DE LOS SOCIAL MEDIA DE AUTOR */
 .footer__social{
   display: flex;
   flex-flow: row nowrap;

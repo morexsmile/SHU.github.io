@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +35,7 @@ a {
 }
 
 body {
+  min-height: 100vh;
   background-image: url('../assets/bg.png');
   font-family: 'Montserrat', 'Eagle Lake', Helvetica, sans-serif;
   font-size: 1rem;
@@ -51,6 +53,7 @@ picture {
   max-width: 100%;
 }
 
+/* HEADER */
 .header {
   width: 100%; 
   max-height: 8rem;
@@ -64,11 +67,13 @@ picture {
   box-shadow: 0 1.5625rem 2.8125rem rgba(0, 0, 0, .2);
   border: .125rem solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(.125rem);
+  /* ANIMACION PARA QUE EL HEADER BAJE CUANDO ABRO LA PAGINA */
   opacity: 0;
   animation: bajar 1s forwards;
   position: relative;
   z-index: 2;
 }
+  /* ANIMACION PARA QUE EL HEADER BAJE CUANDO ABRO LA PAGINA */
 
 @keyframes bajar {
   from {
@@ -112,6 +117,8 @@ picture {
   width: 100%;
 }
 
+/* BUTTON DE MENU HAMBURGUESA CUANDO TENGO RESPONSIVE */
+
 .header__button {
   background: none;
   border: none;
@@ -121,6 +128,8 @@ picture {
   display: none;
   transition: transform 1s ease;
 }
+
+/* CUANDO HAGO CLICK UN BUTTON DE MENU HAMBURGUESA CAMBIA SU POSICION 90 GRADOS */
 
 .header__button:hover {
   transform: rotate(90deg);
@@ -150,6 +159,7 @@ picture {
   font-size: 1rem;
 }
 
+/* CUANDO TENGO LA PAGINA VERSION RESPONSIVE, NO SE VE EL MENU, HAY QUE HACER CLICK EN EL BUTTON Y SE .AÑADE ACTIVO AL HEADER__UL PARA QUE SE ABRE MENU */
 @media (max-width: 1039px) {
   .header__ul {
   width: 100%;
@@ -173,6 +183,8 @@ picture {
   }
 }
 
+/* ANIMACION PARA QUE MENU SE ABRE DE FORMA MÁS FLUIDA */
+
 @keyframes luz {
   from {
       opacity: 0;
@@ -189,12 +201,15 @@ picture {
   transition: color 0.3s ease;
 }
 
+/* CUANDO HACEMOS MOUSEOVER EN EL MENU, SE HACE HOVER CON EL CAMBIO DE COLOR Y CURSOR */
 .header__shu:hover{
   cursor: pointer;
   color: #FBE4D8;
 }
 
+/* MAIN */
 .main{
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -204,6 +219,8 @@ picture {
   opacity: 0;
   animation: aparecer 1s forwards;
 }
+
+/* ANIMATION PARA QUE LA CAJA PRINCIPAL SE MUEVE Y CAMBIA DE OPACIDAD */
 
 @keyframes aparecer {
   from {
@@ -217,6 +234,7 @@ picture {
   }
 }
 
+/* CAMBIO DE PADDING CUANDO SE HACE RESPONSIVE */
 @media (max-width: 1039px) {
   .main {
   padding: 10rem 1rem;
@@ -239,6 +257,7 @@ picture {
   backdrop-filter: blur(.125rem);
 }
 
+/* CAMBIO DE ANCHO Y ALTO CUANDO SE HACE RESPONSIVE */
 @media (max-width: 1039px) {
   .main__block {
     min-height: 15rem;
@@ -248,12 +267,14 @@ picture {
   }
 }
 
+/* CAMBIO DE ANCHO CUANDO SE HACE RESPONSIVE MAS PEQUENO QUE 796px */
 @media (max-width: 796px) {
   .main__block {
    width: 95%;
   }
 }
 
+/* LA CAJA QUE CONTIENE TEXTO */
 .main__box{
   width: 45%;
   min-height: 16rem;
@@ -272,11 +293,13 @@ picture {
   backdrop-filter: blur(.625rem);
 }
 
+/* CUANDO HACEMOS MOUSEOVER EN LA CAJA, LA CAJA SE HACE MÁS GRANDE Y SE CAMBIA EL CURSOR AL POINTER */
 .main__box:hover{
   transform: scale(1.1);
   cursor: pointer;
 }
 
+/* CUANDO SE HACE RESPONSIVE, CAMBIA DEL ANCHO, TEXT ALIGN, TAMAÑO DE FONT Y LA ALUTRA MINIMA */
 @media (max-width: 1039px) {
   .main__box {
    width: 95%;
@@ -286,12 +309,14 @@ picture {
   }
 }
 
+/* CUANDO SE HACE RESPONSIVE, CAMBIA EL ANCHO MINIMO */
 @media (max-width: 796px) {
   .main__block {
    min-width: 95%;
   }
 }
 
+/* FOOTER, CAJA PRINCIPAL DE FOOTER */
 .footer{
   min-height: 4rem;
   background-color: rgba(133, 79, 108, 0.2);
@@ -313,6 +338,7 @@ picture {
   align-items: center;
 }
 
+/* CONTENIDO DEL AUTOR DE LA PAGINA */
 .footer__author{
   display: flex;
   flex-flow: column nowrap;
@@ -321,6 +347,7 @@ picture {
   padding: 1rem;
 }
 
+/* CONTENIDO DE LOS SOCIAL MEDIA DE AUTOR */
 .footer__social{
   display: flex;
   flex-flow: row nowrap;
