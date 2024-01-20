@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
   <head>
+    <!-- META INFORMACION -->
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link rel="shortcut icon" href="assets/favicon.ico" >
+
+    <!-- CSS ARCHIVO -->
     <link rel="stylesheet" href="css/animal.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- JAVA SCRIPT ARCHIVO -->
     <script src="js/animal.js" defer></script>
-        <!-- Primary Meta Tags -->
+
+    <!-- Primary Meta Tags -->
 <title>SHU - Descubre tu destino con el Horóscopo Chino | Predicciones y Personalidad</title>
 <meta name="title" content="SHU - Descubre tu destino con el Horóscopo Chino | Predicciones y Personalidad">
 <meta name="description" content="Explora el fascinante mundo del horóscopo chino en SHU. Obtén predicciones precisas, conoce tu personalidad según tu signo zodiacal chino y descubre cómo influye en tu vida. ¡Desvela los secretos del horóscopo chino en SHU hoy!">
@@ -20,31 +27,38 @@
 <meta property="og:url" content="https://wilmont.es/">
 <meta property="og:title" content="SHU - Descubre tu destino con el Horóscopo Chino | Predicciones y Personalidad">
 <meta property="og:description" content="Explora el fascinante mundo del horóscopo chino en SHU. Obtén predicciones precisas, conoce tu personalidad según tu signo zodiacal chino y descubre cómo influye en tu vida. ¡Desvela los secretos del horóscopo chino en SHU hoy!">
-<meta property="og:image" content="https://metatags.io/images/meta-tags.png">
+<meta property="og:image" content="assets/meta.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://wilmont.es/">
 <meta property="twitter:title" content="SHU - Descubre tu destino con el Horóscopo Chino | Predicciones y Personalidad">
 <meta property="twitter:description" content="Explora el fascinante mundo del horóscopo chino en SHU. Obtén predicciones precisas, conoce tu personalidad según tu signo zodiacal chino y descubre cómo influye en tu vida. ¡Desvela los secretos del horóscopo chino en SHU hoy!">
-<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png">
+<meta property="twitter:image" content="assets/meta.jpg">
 
 <!-- Meta Tags Generated with https://metatags.io -->
   </head>
- 
-  <body>
+
+  <body> 
     
+    <!-- HEADER SECTION - MENU -->
     <header class="header">
       <div class="header__center">
         <section class="header__section">
+
+          <!-- LOGO COMO SVG Y ENLACE PARA PAGINA PRINCIPAL -->
           <h1 class="header__h1">
             <a href="index.html" title="shu">
               <img src="assets/logo.svg" alt="Logo Shu" title="Logo Shu" class="header__logo">
             </a>
           </h1>
+
+          <!-- BUTTON PARA MENU HAMBURGESA CUANDO ESTA EN MODO RESPONSIVE -->
           <button class="header__button" title="menu">
             <img src="assets/menu.svg" class="header__menu" alt="menu">
           </button>
+
+          <!-- NAVEGACION DE ENLCES DE OTRAS SUB PAGINAS DE LA PAGINA WEB -->
           <nav class="header__nav">
             <ul class="header__ul">
               <li><a href="animal.html" class="header__shu" title="animal">animal</a></li>
@@ -57,12 +71,18 @@
       </div>      
     </header>
 
+    <!-- MAIN -->
     <main class="main">
+
+      <!-- TEXTO GRANDE CON LA DESCRIPCION DE ANIMALES -->
       <div class="main__texto">
         <p class="main__p">  <b>El zodíaco chino</b>, o shengxiao, se refiere al <b>círculo de 12 animales</b> que miden los ciclos del tiempo. </p>
         <p class="main__p"> Los signos o animales vienen determinados por el año lunar en que has nacido. Cuenta la leyenda que un dios invitó a todos los animales a despedirse de él antes de su partida de la Tierra. Sólo llegaron 12 de ellos, a saber, <b>la rata, el buey, el tigre, el conejo, el dragón, la serpiente, el caballo, la cabra, el mono, el gallo, el perro y el cerdo</b>, y a cada uno se le dio un lugar de honor en un año basado en el orden de llegada. </p>
         <p class="main__p"> Puedes determinar tu signo animal consultando el año en que naciste. <b>¡Echa un vistazo al verdadero animal de tu corazón y a las personalidades que representan!</b></p>      </div>
-      <div class="main__animales">
+      
+        <!-- SECTION CON FOTOS, CADA UNO TIENE SU IMG Y SOURCE PARA OPTIMIZAR -->
+        <!-- LAS TRES PRIMERAS FOTOS NO TIENEN LOADING LAZY PORQUE SIEMPRE SE VEN CUANDO SE ABRE LA PAGINA -->
+       <div class="main__animales">
         <picture>
           <source srcset="assets/rata.webp" class="main__photo">
           <img src="assets/rata.jpg" alt="rata" class="main__photo">
@@ -112,19 +132,33 @@
           <img src="assets/cerdo.jpg" alt="cerdo" loading="lazy" class="main__photo">
         </picture>
       </div>
+
+      <!-- LIGHTBOX CON FOTOS -->
       <div class="main__lightbox">
+
+        <!-- BUTTON DE CIERRE DE LIGHTBOX -->
         <button class="main__close" title="close">
           <img src="assets/close.svg" alt="close" title="close" class="main__button">
         </button>
+
+        <!-- SECTION CON LA FOTO GRANDE QUE SE ABRE CUANDO HACEMOS CLICK EN LA FOTO PEQUEÑA -->
+        <!-- NO TIENE SRC APOSTA PORQUE GRACIAS A JS LO TOMA DESDE LA FOTO PEQUEÑA, SIRVE PARA OPTIMIZAR EL CODIGO -->
         <img alt="animal" class="main__big">
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__footer">
+
+        <!-- TEXTO COPYRIGHT -->
         <div class="footer__copyright">© Copyright 2024. All rights reserved</div>
+
+        <!-- NOMBRE DE AUTOR DE LA PAGINA WEB -->
         <div class="footer__author">
           <div class="footer__name">Agnieszka Wilmont</div>
+
+          <!-- ENLACES PARA SOCIAL MEDIA -->
           <div class="footer__social">
             <a href="https://www.linkedin.com/in/agnieszka-wilmont-018045191/" title="Agnieszka Wilmont LinkedIn" target="_blank" rel=”noreferrer”><img alt="Agnieszka Wilmont LinkedIn" class="footer__llinkedin" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGwtb3BhY2l0eT0iMC40IiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDUuMTIsNS4xMikiPjxwYXRoIGQ9Ik05LDRjLTIuNzQ5NTIsMCAtNSwyLjI1MDQ4IC01LDV2MzJjMCwyLjc0OTUyIDIuMjUwNDgsNSA1LDVoMzJjMi43NDk1MiwwIDUsLTIuMjUwNDggNSwtNXYtMzJjMCwtMi43NDk1MiAtMi4yNTA0OCwtNSAtNSwtNXpNOSw2aDMyYzEuNjY4NDgsMCAzLDEuMzMxNTIgMywzdjMyYzAsMS42Njg0OCAtMS4zMzE1MiwzIC0zLDNoLTMyYy0xLjY2ODQ4LDAgLTMsLTEuMzMxNTIgLTMsLTN2LTMyYzAsLTEuNjY4NDggMS4zMzE1MiwtMyAzLC0zek0xNCwxMS4wMTE3MmMtMS4wOTUyMiwwIC0yLjA4MDc4LDAuMzI3MzYgLTIuODEwNTUsMC45NDE0MWMtMC43Mjk3NywwLjYxNDA1IC0xLjE3NzczLDEuNTMxMzkgLTEuMTc3NzMsMi41MTM2N2MwLDEuODY3MTggMS42MTk1NywzLjMyMjgxIDMuNjc5NjksMy40NjY4YzAuMDAxMywwLjAwMDY1IDAuMDAyNiwwLjAwMTMgMC4wMDM5MSwwLjAwMTk1YzAuMDk4MTcsMC4wMzM0NiAwLjIwMDk5LDAuMDUxMjYgMC4zMDQ2OSwwLjA1MjczYzIuMjczMDEsMCAzLjk4ODI4LC0xLjU5MjIgMy45ODgyOCwtMy41MjE0OGMtMC4wMDAxOCwtMC4wMTc1OSAtMC4wMDA4MywtMC4wMzUxOCAtMC4wMDE5NSwtMC4wNTI3NGMtMC4xMDE3NSwtMS45MDAyMyAtMS43OTU4OSwtMy40MDIzNCAtMy45ODYzMywtMy40MDIzNHpNMTQsMTIuOTg4MjhjMS4zOTIyMywwIDEuOTQxOTcsMC42MjE3NiAyLjAwMTk1LDEuNTAzOTFjLTAuMDEyMTUsMC44NTYyNSAtMC41NDE4NiwxLjUxOTUzIC0yLjAwMTk1LDEuNTE5NTNjLTEuMzg1NDEsMCAtMi4wMTE3MiwtMC43MDk0OSAtMi4wMTE3MiwtMS41NDQ5MmMwLC0wLjQxNzcxIDAuMTUyNDIsLTAuNzMyNSAwLjQ3MjY2LC0xLjAwMTk1YzAuMzIwMjMsLTAuMjY5NDUgMC44MzQyOCwtMC40NzY1NiAxLjUzOTA2LC0wLjQ3NjU2ek0xMSwxOWMtMC41NTIyNiwwLjAwMDA2IC0wLjk5OTk0LDAuNDQ3NzQgLTEsMXYxOWMwLjAwMDA2LDAuNTUyMjYgMC40NDc3NCwwLjk5OTk0IDEsMWg2YzAuNTUyMjYsLTAuMDAwMDYgMC45OTk5NCwtMC40NDc3NCAxLC0xdi01Ljg2NTIzdi0xMy4xMzQ3N2MtMC4wMDAwNiwtMC41NTIyNiAtMC40NDc3NCwtMC45OTk5NCAtMSwtMXpNMjAsMTljLTAuNTUyMjYsMC4wMDAwNiAtMC45OTk5NCwwLjQ0Nzc0IC0xLDF2MTljMC4wMDAwNiwwLjU1MjI2IDAuNDQ3NzQsMC45OTk5NCAxLDFoNmMwLjU1MjI2LC0wLjAwMDA2IDAuOTk5OTQsLTAuNDQ3NzQgMSwtMXYtMTBjMCwtMC44Mjk2NyAwLjIyNjM5LC0xLjY1NDk3IDAuNjI1LC0yLjE5NTMxYzAuMzk4NjEsLTAuNTQwMzUgMC45MDE0NywtMC44NjQ2MyAxLjg1NzQyLC0wLjg0NzY2YzAuOTg1NzQsMC4wMTY5NSAxLjUwNzU4LDAuMzU0NjQgMS45MDIzNCwwLjg4NDc3YzAuMzk0NzcsMC41MzAxMyAwLjYxNTIzLDEuMzI0ODcgMC42MTUyMywyLjE1ODJ2MTBjMC4wMDAwNiwwLjU1MjI2IDAuNDQ3NzQsMC45OTk5NCAxLDFoNmMwLjU1MjI2LC0wLjAwMDA2IDAuOTk5OTQsLTAuNDQ3NzQgMSwtMXYtMTAuNzM4MjhjMCwtMi45NjE1NCAtMC44NzcyMSwtNS4zMDczOSAtMi4zODA4NiwtNi44OTQ1M2MtMS41MDM2NSwtMS41ODcxNCAtMy41OTQ5NywtMi4zNjcxOSAtNS44MDY2NCwtMi4zNjcxOWMtMi4xMDIwMiwwIC0zLjcwMTY1LDAuNzA0ODkgLTQuODEyNSwxLjQyMzgzdi0wLjQyMzgzYy0wLjAwMDA2LC0wLjU1MjI2IC0wLjQ0Nzc0LC0wLjk5OTk0IC0xLC0xek0xMiwyMWg0djEyLjEzNDc3djQuODY1MjNoLTR6TTIxLDIxaDR2MS41NjA1NWMwLjAwMDEzLDAuNDMgMC4yNzUxMSwwLjgxMTc5IDAuNjgyOTEsMC45NDgxN2MwLjQwNzgxLDAuMTM2MzggMC44NTcxNCwtMC4wMDMxOSAxLjExNTkxLC0wLjM0NjYxYzAsMCAxLjU3MDM3LC0yLjE2MjExIDUuMDEzNjcsLTIuMTYyMTFjMS43NTMzMywwIDMuMjU2ODcsMC41ODI1OCA0LjM1NTQ3LDEuNzQyMTljMS4wOTg2LDEuMTU5NjEgMS44MzIwMywyLjk0NjA3IDEuODMyMDMsNS41MTk1M3Y5LjczODI4aC00di05YzAsLTEuMTY2NjcgLTAuMjc5NTMsLTIuMzcyODkgLTEuMDA5NzcsLTMuMzUzNTJjLTAuNzMwMjMsLTAuOTgwNjIgLTEuOTU4NCwtMS42NjM0MSAtMy40NzI2NiwtMS42ODk0NWMtMS41MjIwNCwtMC4wMjcwMyAtMi43NzAwNiwwLjY2OTk2IC0zLjUwMTk1LDEuNjYyMTFjLTAuNzMxODksMC45OTIxNSAtMS4wMTU2MiwyLjIxMDUzIC0xLjAxNTYyLDMuMzgwODZ2OWgtNHoiPjwvcGF0aD48L2c+PC9nPgo8L3N2Zz4=" title="Agnieszka Wilmont LinkedIn"
               ></a>
@@ -134,5 +168,5 @@
          </div>
       </div>
     </footer>
-    </body>
+  </body>
 </html>
